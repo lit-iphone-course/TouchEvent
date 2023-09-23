@@ -1,24 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchEvent" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-lK-a69">
+                                <rect key="frame" x="324" y="101.66666666666667" width="61" height="35.666666666666671"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="保存">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="save" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2d-As-WW5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtj-oN-X9j">
+                                <rect key="frame" x="8" y="101.66666666666667" width="97.666666666666671" height="35.666666666666671"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="取り消す">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="undo" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpN-jz-8v8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="bIk-zK-MN1">
+                                <rect key="frame" x="8" y="143.33333333333334" width="377" height="502.66666666666663"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WeJ-wN-pPX">
+                                <rect key="frame" x="16" y="654" width="361" height="84"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-iq-XyW">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="KKQ-fk-ECR"/>
+                                            <constraint firstAttribute="width" constant="84" id="jHY-pa-RSn"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="flower.png"/>
+                                        <connections>
+                                            <action selector="selectImage1" destination="BYZ-38-t0r" eventType="touchUpInside" id="eiF-KD-hqj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-gZ-SoB">
+                                        <rect key="frame" x="92.333333333333314" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="84" id="45z-Qi-77c"/>
+                                            <constraint firstAttribute="height" constant="84" id="ddP-he-lFK"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="cloud.png"/>
+                                        <connections>
+                                            <action selector="selectImage2" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Gq-RR-faK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9y-sd-0XD">
+                                        <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="4fX-dT-Kn2"/>
+                                            <constraint firstAttribute="width" constant="84" id="xs2-9B-dAm"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="heart.png"/>
+                                        <connections>
+                                            <action selector="selectImage3" destination="BYZ-38-t0r" eventType="touchUpInside" id="I1Y-kJ-h1F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKb-iz-jfj">
+                                        <rect key="frame" x="277" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="84" id="9Wv-eZ-YEQ"/>
+                                            <constraint firstAttribute="height" constant="84" id="m3t-YW-7O5"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="star.png"/>
+                                        <connections>
+                                            <action selector="selectImage4" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wch-fC-or1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1v-lW-XgP">
+                                <rect key="frame" x="131.66666666666666" y="746" width="129.99999999999997" height="46"/>
+                                <color key="backgroundColor" red="0.34573300229999998" green="0.47402064890000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Lcc-cB-BNw"/>
+                                    <constraint firstAttribute="width" constant="130" id="am7-7J-18O"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="画像を変更">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeBackground" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jxs-tD-PX5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yWT-lK-a69" secondAttribute="trailing" constant="8" id="3JP-MI-zhd"/>
+                            <constraint firstItem="N1v-lW-XgP" firstAttribute="top" secondItem="WeJ-wN-pPX" secondAttribute="bottom" constant="8" id="6Lo-4t-asz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bIk-zK-MN1" secondAttribute="trailing" constant="8" id="A2a-rG-BkN"/>
+                            <constraint firstItem="bIk-zK-MN1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="B1v-9b-an4"/>
+                            <constraint firstItem="Dtj-oN-X9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Kjt-MM-fEl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WeJ-wN-pPX" secondAttribute="trailing" constant="16" id="QoS-fy-fDO"/>
+                            <constraint firstItem="bIk-zK-MN1" firstAttribute="top" secondItem="Dtj-oN-X9j" secondAttribute="bottom" constant="6" id="SXr-Hl-TX4"/>
+                            <constraint firstItem="WeJ-wN-pPX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="T1J-je-6BP"/>
+                            <constraint firstItem="N1v-lW-XgP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U1J-QC-N0y"/>
+                            <constraint firstItem="WeJ-wN-pPX" firstAttribute="top" secondItem="bIk-zK-MN1" secondAttribute="bottom" constant="8" id="Z1d-ko-oaa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N1v-lW-XgP" secondAttribute="bottom" constant="26" id="p9i-TF-lIN"/>
+                            <constraint firstItem="bIk-zK-MN1" firstAttribute="top" secondItem="yWT-lK-a69" secondAttribute="bottom" constant="6" id="yKP-g8-xn9"/>
+                            <constraint firstItem="bIk-zK-MN1" firstAttribute="width" secondItem="bIk-zK-MN1" secondAttribute="height" multiplier="3:4" id="zrT-4b-6ID"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="bIk-zK-MN1" id="s8l-va-OEZ"/>
+                        <outlet property="changeBackgroundButton" destination="N1v-lW-XgP" id="uWS-sw-QbY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="62" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.png" width="300" height="400.07998657226562"/>
+        <image name="cloud.png" width="400.07998657226562" height="400.07998657226562"/>
+        <image name="flower.png" width="400.07998657226562" height="400.07998657226562"/>
+        <image name="heart.png" width="400.07998657226562" height="400.07998657226562"/>
+        <image name="star.png" width="400.07998657226562" height="400.07998657226562"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
