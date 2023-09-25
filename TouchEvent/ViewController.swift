@@ -86,15 +86,14 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
     }
     
     @IBAction func undo() {
-        if imageViewArray.isEmpty {
-            //配列が空
-        } else {
-            //配列の末尾の要素を削除
-            imageViewArray.last!.removeFromSuperview()
-            
-            //スタンプを表示させるimageViewの配列の末尾の要素を削除
-            imageViewArray.removeLast()
-        }
+        //配列が空だったらここまでで処理を終了
+        if imageViewArray.isEmpty { return }
+        
+        //配列の末尾の要素を削除
+        imageViewArray.last!.removeFromSuperview()
+        
+        //スタンプを表示させるimageViewの配列の末尾の要素を削除
+        imageViewArray.removeLast()
     }
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
