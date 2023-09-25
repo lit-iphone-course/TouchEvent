@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,7 +37,7 @@
                                     <action selector="undo" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpN-jz-8v8"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="bIk-zK-MN1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bIk-zK-MN1">
                                 <rect key="frame" x="8" y="143.33333333333334" width="377" height="502.66666666666663"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WeJ-wN-pPX">
@@ -49,7 +50,7 @@
                                             <constraint firstAttribute="width" constant="84" id="jHY-pa-RSn"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="flower.png"/>
+                                        <state key="normal" title="Button" image="flower"/>
                                         <connections>
                                             <action selector="selectImage1" destination="BYZ-38-t0r" eventType="touchUpInside" id="eiF-KD-hqj"/>
                                         </connections>
@@ -61,7 +62,7 @@
                                             <constraint firstAttribute="height" constant="84" id="ddP-he-lFK"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="cloud.png"/>
+                                        <state key="normal" title="Button" image="cloud"/>
                                         <connections>
                                             <action selector="selectImage2" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Gq-RR-faK"/>
                                         </connections>
@@ -73,7 +74,7 @@
                                             <constraint firstAttribute="width" constant="84" id="xs2-9B-dAm"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="heart.png"/>
+                                        <state key="normal" title="Button" image="heart"/>
                                         <connections>
                                             <action selector="selectImage3" destination="BYZ-38-t0r" eventType="touchUpInside" id="I1Y-kJ-h1F"/>
                                         </connections>
@@ -85,7 +86,7 @@
                                             <constraint firstAttribute="height" constant="84" id="m3t-YW-7O5"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="star.png"/>
+                                        <state key="normal" title="Button" image="star"/>
                                         <connections>
                                             <action selector="selectImage4" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wch-fC-or1"/>
                                         </connections>
@@ -104,6 +105,11 @@
                                 <buttonConfiguration key="configuration" style="plain" title="画像を変更">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="changeBackground" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jxs-tD-PX5"/>
                                 </connections>
@@ -129,7 +135,6 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="bIk-zK-MN1" id="s8l-va-OEZ"/>
-                        <outlet property="changeBackgroundButton" destination="N1v-lW-XgP" id="uWS-sw-QbY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -138,11 +143,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background.png" width="300" height="400.07998657226562"/>
-        <image name="cloud.png" width="400.07998657226562" height="400.07998657226562"/>
-        <image name="flower.png" width="400.07998657226562" height="400.07998657226562"/>
-        <image name="heart.png" width="400.07998657226562" height="400.07998657226562"/>
-        <image name="star.png" width="400.07998657226562" height="400.07998657226562"/>
+        <image name="background" width="1250" height="1667"/>
+        <image name="cloud" width="1667" height="1667"/>
+        <image name="flower" width="1667" height="1667"/>
+        <image name="heart" width="1667" height="1667"/>
+        <image name="star" width="1667" height="1667"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
