@@ -13,6 +13,7 @@
 		EB57671E2ABF49730086AA03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB57671C2ABF49730086AA03 /* Main.storyboard */; };
 		EB5767202ABF49740086AA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB57671F2ABF49740086AA03 /* Assets.xcassets */; };
 		EB5767232ABF49740086AA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5767212ABF49740086AA03 /* LaunchScreen.storyboard */; };
+		EBB4A0102C806036003A410E /* StickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4A00F2C806036003A410E /* StickerType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EB57671F2ABF49740086AA03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB5767222ABF49740086AA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB5767242ABF49740086AA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB4A00F2C806036003A410E /* StickerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				EB5767162ABF49730086AA03 /* AppDelegate.swift */,
 				EB5767182ABF49730086AA03 /* SceneDelegate.swift */,
 				EB57671A2ABF49730086AA03 /* ViewController.swift */,
+				EBB4A00F2C806036003A410E /* StickerType.swift */,
 				EB57671C2ABF49730086AA03 /* Main.storyboard */,
 				EB57671F2ABF49740086AA03 /* Assets.xcassets */,
 				EB5767212ABF49740086AA03 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				EB57671B2ABF49730086AA03 /* ViewController.swift in Sources */,
 				EB5767172ABF49730086AA03 /* AppDelegate.swift in Sources */,
 				EB5767192ABF49730086AA03 /* SceneDelegate.swift in Sources */,
+				EBB4A0102C806036003A410E /* StickerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

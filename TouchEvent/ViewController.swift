@@ -13,8 +13,11 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
     //背景画像を表示させるimageView
     @IBOutlet var backgroundImageView: UIImageView!
     
-    //選択されたスタンプの画像名
-    var selectedImageName: String = "flower"
+    //選択されたスタンプの名前を表示するlabel
+    @IBOutlet var stickerNameLabel: UILabel!
+    
+    //選択されたスタンプの種類
+    var selectedSticker: StickerType = .flower
     
     //スタンプを表示させるimageViewの配列
     var imageViewArray: [UIImageView] = []
@@ -30,7 +33,7 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
         
         //imageViewを用意してスタンプ画像と座標をセット
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        imageView.image = UIImage(named: selectedImageName)
+        imageView.image = UIImage(named: selectedSticker.imageName)
         imageView.center = CGPoint(x: location.x, y: location.y)
         
         //タッチされた位置にスタンプ画像を追加
@@ -41,19 +44,23 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate {
     }
     
     @IBAction func selectImage1() {
-        selectedImageName = "flower"
+        selectedSticker = .flower
+        stickerNameLabel.text = "選択中: \(selectedSticker.displayName)"
     }
     
     @IBAction func selectImage2() {
-        selectedImageName = "cloud"
+        selectedSticker = .cloud
+        stickerNameLabel.text = "選択中: \(selectedSticker.displayName)"
     }
     
     @IBAction func selectImage3() {
-        selectedImageName = "heart"
+        selectedSticker = .heart
+        stickerNameLabel.text = "選択中: \(selectedSticker.displayName)"
     }
     
     @IBAction func selectImage4() {
-        selectedImageName = "star"
+        selectedSticker = .star
+        stickerNameLabel.text = "選択中: \(selectedSticker.displayName)"
     }
     
     @IBAction func changeBackground() {
