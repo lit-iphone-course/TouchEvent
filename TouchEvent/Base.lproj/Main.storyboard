@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWT-lK-a69">
-                                <rect key="frame" x="324" y="101.66666666666667" width="61" height="35.666666666666671"/>
+                                <rect key="frame" x="327" y="101.66666666666667" width="58" height="35.666666666666671"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="保存">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtj-oN-X9j">
-                                <rect key="frame" x="8" y="101.66666666666667" width="97.666666666666671" height="35.666666666666671"/>
+                                <rect key="frame" x="8" y="101.66666666666667" width="91.666666666666671" height="35.666666666666671"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="取り消す">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
@@ -39,6 +39,9 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bIk-zK-MN1">
                                 <rect key="frame" x="8" y="143.33333333333334" width="377" height="502.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bIk-zK-MN1" secondAttribute="height" multiplier="3:4" id="zrT-4b-6ID"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WeJ-wN-pPX">
                                 <rect key="frame" x="16" y="654" width="361" height="84"/>
@@ -114,14 +117,22 @@
                                     <action selector="changeBackground" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jxs-tD-PX5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選択中: 花" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-Fg-BdH">
+                                <rect key="frame" x="158" y="108.66666666666667" width="77" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yWT-lK-a69" secondAttribute="trailing" constant="8" id="3JP-MI-zhd"/>
+                            <constraint firstItem="AEd-Fg-BdH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="42x-5g-A0I"/>
                             <constraint firstItem="N1v-lW-XgP" firstAttribute="top" secondItem="WeJ-wN-pPX" secondAttribute="bottom" constant="8" id="6Lo-4t-asz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bIk-zK-MN1" secondAttribute="trailing" constant="8" id="A2a-rG-BkN"/>
                             <constraint firstItem="bIk-zK-MN1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="B1v-9b-an4"/>
+                            <constraint firstItem="yWT-lK-a69" firstAttribute="centerY" secondItem="AEd-Fg-BdH" secondAttribute="centerY" id="DwO-lk-ZUP"/>
                             <constraint firstItem="Dtj-oN-X9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Kjt-MM-fEl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WeJ-wN-pPX" secondAttribute="trailing" constant="16" id="QoS-fy-fDO"/>
                             <constraint firstItem="bIk-zK-MN1" firstAttribute="top" secondItem="Dtj-oN-X9j" secondAttribute="bottom" constant="6" id="SXr-Hl-TX4"/>
@@ -130,11 +141,11 @@
                             <constraint firstItem="WeJ-wN-pPX" firstAttribute="top" secondItem="bIk-zK-MN1" secondAttribute="bottom" constant="8" id="Z1d-ko-oaa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N1v-lW-XgP" secondAttribute="bottom" constant="26" id="p9i-TF-lIN"/>
                             <constraint firstItem="bIk-zK-MN1" firstAttribute="top" secondItem="yWT-lK-a69" secondAttribute="bottom" constant="6" id="yKP-g8-xn9"/>
-                            <constraint firstItem="bIk-zK-MN1" firstAttribute="width" secondItem="bIk-zK-MN1" secondAttribute="height" multiplier="3:4" id="zrT-4b-6ID"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="bIk-zK-MN1" id="s8l-va-OEZ"/>
+                        <outlet property="stickerNameLabel" destination="AEd-Fg-BdH" id="fbn-yq-wga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
